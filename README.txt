@@ -1,30 +1,23 @@
-SITIO DIDÁCTICO IBERO — VERSIÓN 7
+SITIO DIDÁCTICO IBERO — VERSIÓN 8 GITHUB PAGES
 
-Versión lista para publicación inicial.
+CORRECCIÓN PRINCIPAL
+Las imágenes están incrustadas dentro de los propios archivos HTML como data URI.
+Por lo tanto, esta versión NO necesita carpeta assets y evita errores 404 de imágenes.
 
-Secciones habilitadas:
-- Presentación del curso
-- Mecanismos
-- Plano inclinado
-- Engranes
+SITIO OFICIAL
+https://iroelh.github.io/tercero/
 
-Cambios principales:
-- La página de Engranes se rehízo usando únicamente las ilustraciones aprobadas por el usuario:
-  - partes del engrane
-  - engranes simples
-  - cambio de sentido de giro
-  - engranaje planetario
-- Se mantuvieron visibles pero deshabilitadas las secciones:
-  - engrane y cremallera
-  - levas
-  - poleas
-  - bloque 3
-  - bloque 4
-- El índice de mecanismos ahora comunica claramente qué apartados están activos.
-- Se conservaron las correcciones de maquetación de Plano inclinado.
+PARA ACTUALIZAR GITHUB PAGES
+1. Sustituir los archivos HTML actuales por los de esta carpeta.
+2. Subir también el archivo .nojekyll.
+3. No es necesario crear ni subir una carpeta assets.
+4. Esperar unos minutos a que GitHub Pages publique el nuevo commit.
+5. Si el navegador conserva la versión anterior, hacer recarga forzada.
 
-Correo:
-- iroel.ibero@gmail.com
+Secciones activas:
+- index.html
+- mecanismos.html
+- plano-inclinado.html
+- engranes.html
 
-Comunicación:
-- Mensajero de Microsoft Teams
+Las demás secciones permanecen visibles como contenido próximo pero deshabilitadas.
