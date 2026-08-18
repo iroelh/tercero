@@ -287,6 +287,141 @@ main{padding:38px clamp(24px,5vw,72px) 80px;min-width:0}
   .equation-grid{grid-template-columns:1fr}
 }
 
+
+/* --- Poleas y transmisión de movimiento --- */
+.transmission-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.transmission-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:22px;
+  box-shadow:var(--shadow);
+  min-width:0;
+  overflow:hidden;
+}
+.transmission-card h3{margin:0 0 8px;font-size:22px}
+.transmission-card p{margin:0;color:var(--muted)}
+.transmission-card ul,.transmission-card ol{margin:14px 0 0;padding-left:21px}
+.transmission-card li{margin:7px 0}
+.mech-diagram{
+  width:100%;
+  min-height:240px;
+  margin-bottom:18px;
+  border-radius:18px;
+  background:linear-gradient(180deg,#fff8f9,#f3efec);
+  border:1px solid var(--line);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+.mech-diagram svg{width:100%;height:auto;display:block}
+.formula-list{display:grid;gap:12px}
+.formula-panel{
+  border:1px solid #F0D9DE;
+  background:#FFF2F4;
+  border-radius:16px;
+  padding:16px 18px;
+}
+.formula-panel strong{
+  display:block;
+  color:var(--ibero-red-dark);
+  margin-bottom:5px;
+}
+.choice-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+.choice{
+  padding:18px;
+  border-radius:18px;
+  background:#FBF9F7;
+  border:1px solid var(--line);
+}
+.choice h4{margin:0 0 7px;font-size:16px}
+.choice p{margin:0;color:var(--muted);font-size:14px}
+.parts-list{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin-top:16px;
+}
+.part{
+  padding:14px;
+  border-radius:15px;
+  border:1px solid var(--line);
+  background:#FBF9F7;
+}
+.part strong{display:block;color:var(--ibero-red-dark);margin-bottom:4px}
+.tip-box{
+  padding:18px 20px;
+  border-left:4px solid var(--ibero-red);
+  background:#FFF5F6;
+  border-radius:0 16px 16px 0;
+}
+.tech-table-wrap{overflow-x:auto}
+.tech-table{
+  width:100%;
+  min-width:720px;
+  border-collapse:collapse;
+  font-size:14px;
+}
+.tech-table th,.tech-table td{
+  text-align:left;
+  vertical-align:top;
+  padding:12px 13px;
+  border-bottom:1px solid var(--line);
+}
+.tech-table th{background:#FBF9F7}
+@media(max-width:960px){
+  .choice-grid{grid-template-columns:1fr}
+  .parts-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:900px){
+  .transmission-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .transmission-card{padding:18px;border-radius:18px}
+  .parts-list{grid-template-columns:1fr}
+  .mech-diagram{min-height:0}
+}
+
+
+/* --- Corrección robusta de Poleas y transmisión --- */
+main{width:100%;max-width:100%;min-width:0;overflow-x:hidden}
+.topbar{width:100%;flex-wrap:wrap}
+.page-hero{width:100%;grid-template-columns:minmax(0,1fr) minmax(280px,420px)}
+.page-hero>*{min-width:0}
+.big-illustration{overflow:hidden;padding:0;background:#F5F1EE}
+.big-illustration img{display:block;width:100%;height:auto;object-fit:contain}
+.section,.card,.transmission-grid,.transmission-card,.choice-grid,.parts-list,.tech-table-wrap{min-width:0;max-width:100%}
+.transmission-card{overflow:hidden}
+.transmission-card img{display:block;width:100%;height:auto;object-fit:contain;border-radius:16px;margin-bottom:16px}
+.figure-wide{background:#fff;border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:var(--shadow);overflow:hidden}
+.figure-wide img{display:block;width:100%;height:auto;max-height:780px;object-fit:contain;border-radius:16px;background:#F7F5F2}
+.figure-wide h3{margin:16px 0 8px;font-size:21px}
+.figure-wide p{margin:0;color:var(--muted)}
+.image-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+@media(max-width:1100px){.page-hero{grid-template-columns:1fr}}
+@media(max-width:900px){.image-grid,.transmission-grid,.choice-grid{grid-template-columns:1fr!important}}
+@media(max-width:760px){
+  main{width:100%;padding:18px 14px 48px}
+  .topbar{display:block;margin-bottom:18px}
+  .page-hero{display:flex;flex-direction:column;gap:18px;padding:22px;border-radius:22px}
+  .page-hero h1{font-size:clamp(34px,12vw,48px);line-height:1}
+  .page-hero p{font-size:16px}
+  .section{margin-top:34px}
+  .section-head{display:block;margin-bottom:15px}
+  .section-head h2{font-size:clamp(28px,9vw,38px);line-height:1.03}
+  .section-head>p{margin-top:10px}
+  .transmission-card,.figure-wide,.card{padding:18px;border-radius:18px}
+  .parts-list{grid-template-columns:1fr!important}
+}
+
 </style>
 </head>
 <body>
@@ -305,7 +440,7 @@ main{padding:38px clamp(24px,5vw,72px) 80px;min-width:0}
       <a class="nav-link" href="index.html"><span class="dot"></span>Presentación</a>
       <a class="nav-link" href="mecanismos.html"><span class="dot"></span>Mecanismos</a>
       <div class="nav-title">Mecanismos</div>
-      <a class="nav-link" href="plano-inclinado.html"><span class="dot"></span>Plano inclinado</a><a class="nav-link" href="engranes.html"><span class="dot"></span>Engranes</a><a class="nav-link disabled" href="#"><span class="dot"></span>Engrane y cremallera</a><a class="nav-link disabled" href="#"><span class="dot"></span>Levas</a><a class="nav-link disabled" href="#"><span class="dot"></span>Poleas</a>
+      <a class="nav-link" href="plano-inclinado.html"><span class="dot"></span>Plano inclinado</a><a class="nav-link" href="engranes.html"><span class="dot"></span>Engranes</a><a class="nav-link disabled" href="#"><span class="dot"></span>Engrane y cremallera</a><a class="nav-link disabled" href="#"><span class="dot"></span>Levas</a><a class="nav-link active" href="poleas.html"><span class="dot"></span>Poleas y transmisión</a>
       <div class="nav-title">Próximamente</div>
       <a class="nav-link disabled" href="#"><span class="dot"></span>Bloque 3 · En construcción</a><a class="nav-link disabled" href="#"><span class="dot"></span>Bloque 4 · En construcción</a>
       <div class="sidebar-footer">Universidad Iberoamericana · Otoño 2026</div>
@@ -315,23 +450,145 @@ main{padding:38px clamp(24px,5vw,72px) 80px;min-width:0}
 <main>
 <div class="topbar">
   <div class="eyebrow">Universidad Iberoamericana · Material académico</div>
-  
+  <div class="pill">Otoño 2026 · Presencial</div>
+</div>
+
+
 <div class="page-hero">
   <div>
-    <div class="eyebrow">Contenido próximo</div>
-    <h1>Poleas</h1>
-    <p>Esta sección forma parte de la planeación del sitio, pero por ahora se mantiene deshabilitada para esta primera entrega.</p>
+    <div class="eyebrow">Mecanismos · 03</div>
+    <h1>Poleas y transmisión de movimiento</h1>
+    <p>Para una máquina tipo Rube Goldberg podemos transmitir movimiento entre ejes separados mediante poleas, bandas, correas dentadas, cadenas, ruedas de fricción o cuerdas. Cada sistema modifica velocidad, par, precisión y sentido de giro.</p>
+    <div class="example-row">
+      <span class="example-tag">Poleas</span>
+      <span class="example-tag">Bandas</span>
+      <span class="example-tag">GT2 / 2GT</span>
+      <span class="example-tag">Cadenas</span>
+      <span class="example-tag">Fricción</span>
+    </div>
   </div>
-  <div class="big-illustration">
-    <svg viewBox="0 0 320 220" fill="none"><path d="M95 174 160 48l65 126H95Z" fill="#fff" stroke="currentColor" stroke-width="8"/><path d="M160 93v38M160 151v2" stroke="currentColor" stroke-width="10" stroke-linecap="round"/></svg>
-  </div>
+  <div class="big-illustration"><img src="img/poleas-banda.webp" alt="Poleas de cartón conectadas por banda"></div>
 </div>
+
 <section class="section">
-  <div class="card">
-    <p><strong>Estado:</strong> en construcción. Se integrará en una revisión posterior del sitio.</p>
+  <div class="section-head">
+    <div><div class="eyebrow">Principio</div><h2>Transmitir movimiento entre ejes</h2></div>
+    <p>La transmisión permite llevar el giro a otra zona de la máquina sin que ambos ejes tengan que estar juntos.</p>
+  </div>
+  <div class="image-grid">
+    <article class="figure-wide">
+      <img src="img/poleas-banda.webp" alt="Poleas de distinto diámetro conectadas mediante una banda">
+      <h3>Poleas con banda</h3>
+      <p>Permiten separar ejes y cambiar la relación de velocidad mediante sus diámetros.</p>
+    </article>
+    <article class="figure-wide">
+      <img src="img/ruedas-friccion.webp" alt="Ruedas de fricción">
+      <h3>Ruedas de fricción</h3>
+      <p>Transmiten el movimiento por contacto directo. Son sencillas, pero pueden patinar si la presión entre ambas ruedas es insuficiente.</p>
+    </article>
   </div>
 </section>
 
+<section class="section">
+  <div class="section-head"><div><div class="eyebrow">Relación de transmisión</div><h2>Diámetro, velocidad y par</h2></div></div>
+  <div class="transmission-grid">
+    <article class="transmission-card">
+      <img src="img/poleas-banda.webp" alt="Polea grande y pequeña">
+      <h3>Regla visual</h3>
+      <p><strong>Grande → pequeña:</strong> aumenta la velocidad. <strong>Pequeña → grande:</strong> reduce velocidad y aumenta el par ideal.</p>
+    </article>
+    <article class="transmission-card">
+      <h3>Fórmulas básicas</h3>
+      <div class="formula-list">
+        <div class="formula-panel"><strong>Relación de velocidades</strong>n₂ / n₁ = D₁ / D₂</div>
+        <div class="formula-panel"><strong>Velocidad de salida</strong>n₂ = n₁ · D₁ / D₂</div>
+        <div class="formula-panel"><strong>Par ideal aproximado</strong>T₂ / T₁ ≈ D₂ / D₁</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><div class="eyebrow">Correa dentada</div><h2>GT2 / 2GT para impresora 3D</h2></div>
+    <p>Cuando necesitamos sincronía y queremos evitar el deslizamiento utilizamos una correa dentada.</p>
+  </div>
+  <article class="figure-wide">
+    <img src="img/polea-gt2.webp" alt="Plano didáctico de polea GT2 de 20 dientes">
+    <h3>Ejemplo didáctico: 20 dientes</h3>
+    <p>La ilustración muestra paso de 2.00 mm, diámetro primitivo de 12.73 mm, diámetro exterior aproximado de 12.22 mm y banda de 6 mm.</p>
+  </article>
+  <div class="card" style="margin-top:18px">
+    <div class="formula-panel"><strong>Diámetro primitivo</strong>Dₚ = N · p / π</div>
+    <div class="tip-box" style="margin-top:14px"><strong>Importante:</strong> para fabricación precisa debe utilizarse el perfil GT2 real correspondiente a la banda comercial.</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><div class="eyebrow">Cadena</div><h2>Piñón para cadena de bicicleta</h2></div></div>
+  <div class="image-grid">
+    <article class="figure-wide">
+      <img src="img/cadena-plano.webp" alt="Plano de piñón para cadena de bicicleta">
+      <h3>Cadena 1/2&quot; × 1/8&quot;</h3>
+      <p>La medida principal es el paso de 12.70 mm entre rodillos. En el ejemplo de 20 dientes, el diámetro primitivo es aproximadamente 81.18 mm.</p>
+    </article>
+    <article class="figure-wide">
+      <img src="img/cadena-modelo.webp" alt="Modelo con cadena y catarinas">
+      <h3>Modelo físico</h3>
+      <p>Para usar una cadena real, los dientes deben corresponder al diámetro de los rodillos y al ancho interior de la cadena.</p>
+    </article>
+  </div>
+  <div class="card" style="margin-top:18px"><div class="formula-panel"><strong>Diámetro primitivo de una catarina</strong>Dₚ = p / sin(π / N)</div></div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><div class="eyebrow">Cuerda</div><h2>Poleas para levantar o redirigir cargas</h2></div></div>
+  <article class="figure-wide">
+    <img src="img/polea-cuerda.webp" alt="Modelo de carrete, cuerda, polea y carga">
+    <h3>Carrete + polea fija</h3>
+    <p>La cuerda puede enrollarse en un tambor para producir desplazamiento lineal o cambiar de dirección mediante una polea.</p>
+  </article>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><div class="eyebrow">Referencia</div><h2>Engranes como transmisión directa</h2></div></div>
+  <div class="image-grid">
+    <article class="figure-wide">
+      <img src="img/par-engranes.webp" alt="Dos engranes de cartón">
+      <h3>Dos engranes</h3>
+      <p>Transmiten movimiento entre ejes próximos y giran en sentidos opuestos.</p>
+    </article>
+    <article class="figure-wide">
+      <img src="img/tren-engranes.webp" alt="Tren de tres engranes de cartón">
+      <h3>Tren de engranes</h3>
+      <p>El engrane intermedio permite extender la transmisión y volver a invertir el sentido de giro.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head"><div><div class="eyebrow">Construcción</div><h2>Materiales para modelos pequeños</h2></div></div>
+  <div class="parts-list">
+    <div class="part"><strong>Poleas</strong>Cartón laminado, MDF, acrílico o impresión 3D.</div>
+    <div class="part"><strong>Ejes</strong>Palillos, brochetas, varilla o tornillos.</div>
+    <div class="part"><strong>Bujes</strong>Popotes o pequeños tubos.</div>
+    <div class="part"><strong>Transmisión</strong>Liga, O-ring, cuerda, GT2 o cadena.</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="activity">
+    <h3>Actividad de diseño</h3>
+    <ol>
+      <li>Elijan dos ejes que necesiten conectar.</li>
+      <li>Decidan si requieren el mismo sentido de giro o el contrario.</li>
+      <li>Definan si buscan más velocidad, más par o relación 1:1.</li>
+      <li>Seleccionen banda, GT2, cadena, cuerda o ruedas de fricción.</li>
+      <li>Construyan primero un banco de prueba.</li>
+      <li>Prueben al menos 10 veces antes de integrarlo a la máquina completa.</li>
+    </ol>
+  </div>
+</section>
 
 <div class="footer"><div>© 2026 · Dr. Erick Iroel Heredia Carrillo</div><span>Material didáctico · Universidad Iberoamericana</span></div>
 </main>
