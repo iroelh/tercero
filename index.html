@@ -287,6 +287,109 @@ main{padding:38px clamp(24px,5vw,72px) 80px;min-width:0}
   .equation-grid{grid-template-columns:1fr}
 }
 
+
+/* --- Poleas y transmisión de movimiento --- */
+.transmission-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.transmission-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:22px;
+  box-shadow:var(--shadow);
+  min-width:0;
+  overflow:hidden;
+}
+.transmission-card h3{margin:0 0 8px;font-size:22px}
+.transmission-card p{margin:0;color:var(--muted)}
+.transmission-card ul,.transmission-card ol{margin:14px 0 0;padding-left:21px}
+.transmission-card li{margin:7px 0}
+.mech-diagram{
+  width:100%;
+  min-height:240px;
+  margin-bottom:18px;
+  border-radius:18px;
+  background:linear-gradient(180deg,#fff8f9,#f3efec);
+  border:1px solid var(--line);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+.mech-diagram svg{width:100%;height:auto;display:block}
+.formula-list{display:grid;gap:12px}
+.formula-panel{
+  border:1px solid #F0D9DE;
+  background:#FFF2F4;
+  border-radius:16px;
+  padding:16px 18px;
+}
+.formula-panel strong{
+  display:block;
+  color:var(--ibero-red-dark);
+  margin-bottom:5px;
+}
+.choice-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+.choice{
+  padding:18px;
+  border-radius:18px;
+  background:#FBF9F7;
+  border:1px solid var(--line);
+}
+.choice h4{margin:0 0 7px;font-size:16px}
+.choice p{margin:0;color:var(--muted);font-size:14px}
+.parts-list{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin-top:16px;
+}
+.part{
+  padding:14px;
+  border-radius:15px;
+  border:1px solid var(--line);
+  background:#FBF9F7;
+}
+.part strong{display:block;color:var(--ibero-red-dark);margin-bottom:4px}
+.tip-box{
+  padding:18px 20px;
+  border-left:4px solid var(--ibero-red);
+  background:#FFF5F6;
+  border-radius:0 16px 16px 0;
+}
+.tech-table-wrap{overflow-x:auto}
+.tech-table{
+  width:100%;
+  min-width:720px;
+  border-collapse:collapse;
+  font-size:14px;
+}
+.tech-table th,.tech-table td{
+  text-align:left;
+  vertical-align:top;
+  padding:12px 13px;
+  border-bottom:1px solid var(--line);
+}
+.tech-table th{background:#FBF9F7}
+@media(max-width:960px){
+  .choice-grid{grid-template-columns:1fr}
+  .parts-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:900px){
+  .transmission-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .transmission-card{padding:18px;border-radius:18px}
+  .parts-list{grid-template-columns:1fr}
+  .mech-diagram{min-height:0}
+}
+
 </style>
 </head>
 <body>
@@ -305,7 +408,7 @@ main{padding:38px clamp(24px,5vw,72px) 80px;min-width:0}
       <a class="nav-link active" href="index.html"><span class="dot"></span>Presentación</a>
       <a class="nav-link" href="mecanismos.html"><span class="dot"></span>Mecanismos</a>
       <div class="nav-title">Mecanismos</div>
-      <a class="nav-link" href="plano-inclinado.html"><span class="dot"></span>Plano inclinado</a><a class="nav-link" href="engranes.html"><span class="dot"></span>Engranes</a><a class="nav-link disabled" href="#"><span class="dot"></span>Engrane y cremallera</a><a class="nav-link disabled" href="#"><span class="dot"></span>Levas</a><a class="nav-link disabled" href="#"><span class="dot"></span>Poleas</a>
+      <a class="nav-link" href="plano-inclinado.html"><span class="dot"></span>Plano inclinado</a><a class="nav-link" href="engranes.html"><span class="dot"></span>Engranes</a><a class="nav-link disabled" href="#"><span class="dot"></span>Engrane y cremallera</a><a class="nav-link disabled" href="#"><span class="dot"></span>Levas</a><a class="nav-link" href="poleas.html"><span class="dot"></span>Poleas y transmisión</a>
       <div class="nav-title">Próximamente</div>
       <a class="nav-link disabled" href="#"><span class="dot"></span>Bloque 3 · En construcción</a><a class="nav-link disabled" href="#"><span class="dot"></span>Bloque 4 · En construcción</a>
       <div class="sidebar-footer">Universidad Iberoamericana · Otoño 2026</div>
