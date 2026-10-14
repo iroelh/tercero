@@ -391,7 +391,10 @@ main{padding:38px clamp(24px,5vw,72px) 80px;min-width:0}
 }
 
 </style>
-</head>
+<style>
+.exercise-announcement{position:relative;overflow:hidden;min-height:590px;background:radial-gradient(circle at 82% 40%,#e95a67 0%,#a30d2d 39%,#370718 100%);border-radius:32px;margin-bottom:30px;padding:clamp(28px,5vw,65px);display:grid;grid-template-columns:1.3fr .7fr;align-items:center;isolation:isolate;box-shadow:0 20px 65px #7b092344;color:white}
+.exercise-content{position:relative;z-index:2}.ex-tag{display:inline-block;border:1px solid #ffffff77;border-radius:50px;padding:8px 14px;font-size:12px;font-weight:800;letter-spacing:.1em}.exercise-kicker{font-weight:900;letter-spacing:.13em;color:#ffd5b2;font-size:clamp(21px,3vw,36px);margin:32px 0 0}.exercise-announcement h1{font-size:clamp(60px,8.3vw,128px);line-height:.88;letter-spacing:-.07em;margin:8px 0 28px;font-weight:950}.exercise-announcement h1 em{display:block;color:#ffca8a;font-style:normal;font-size:.69em;letter-spacing:-.04em}.exercise-content>p:not(.exercise-kicker,.exercise-foot){font-size:clamp(17px,1.8vw,23px);max-width:600px;line-height:1.5}.exercise-cta{display:inline-flex;gap:28px;align-items:center;background:white;color:#9d1432;padding:19px 24px;border-radius:12px;text-decoration:none;font-weight:900;box-shadow:0 10px 25px #16040b44;margin-top:23px;transition:transform .2s}.exercise-cta:hover{transform:translateY(-4px)}.exercise-foot{font-size:12px!important;letter-spacing:.04em;color:#ffe7e8;margin-top:28px}.exercise-art{position:relative;min-height:350px;display:grid;place-items:center}.speaker-body{width:min(27vw,275px);height:315px;border-radius:95px 95px 85px 85px;background:linear-gradient(115deg,#171923,#30343b 40%,#0e121a);box-shadow:inset -18px -2px 30px #0008,18px 32px 30px #13030a66;position:relative;transform:rotate(-9deg)}.speaker-grille{position:absolute;inset:55px 20px 65px;border-radius:44%;background:radial-gradient(circle,#53565d 1.3px,transparent 2px) 0 0/8px 8px,#151922;border:7px solid #45454a}.speaker-ring{position:absolute;inset:9px 17px auto;height:42px;border:8px solid #ffac61;border-radius:50%;box-shadow:0 0 22px #ff8737,0 0 40px #e4288b}.speaker-led{position:absolute;left:35%;right:35%;bottom:22px;height:7px;background:#ffdc8d;border-radius:8px;box-shadow:0 0 20px #fda453}.sound{position:absolute;border:3px solid #ffffff66;border-left:0;border-bottom:0;border-radius:50%;width:260px;height:260px;right:-65px;z-index:-1}.sound-two{width:350px;height:350px;right:-110px}.speaker-shadow{position:absolute;width:260px;height:60px;bottom:-4px;border-radius:50%;background:#10020b77;filter:blur(17px)}@media(max-width:900px){.exercise-announcement{grid-template-columns:1fr;min-height:auto}.exercise-art{min-height:250px}.speaker-body{width:190px;height:245px}.speaker-grille{inset:45px 15px 50px}.exercise-announcement h1{font-size:clamp(56px,12vw,90px)}}
+</style></head>
 <body>
 <div class="layout">
 
@@ -405,6 +408,7 @@ main{padding:38px clamp(24px,5vw,72px) 80px;min-width:0}
       </a>
       <div class="course-chip"><small>Taller de Usabilidad (DPE)</small><p>Interacción<br>Dr. Erick Iroel Heredia Carrillo</p></div>
       <div class="nav-title">Curso</div>
+      <a class="nav-link" href="ejercicio-3-bocina.html"><span class="dot"></span>3.º ejercicio · Bocina</a>
       <a class="nav-link active" href="index.html"><span class="dot"></span>Presentación</a>
       <a class="nav-link" href="mecanismos.html"><span class="dot"></span>Mecanismos</a>
       <div class="nav-title">Mecanismos</div>
@@ -421,6 +425,10 @@ main{padding:38px clamp(24px,5vw,72px) 80px;min-width:0}
   <div class="pill">Otoño 2026 · Presencial</div>
 </div>
 
+<section class="exercise-announcement" aria-labelledby="third-exercise-title">
+ <div class="exercise-content"><span class="ex-tag">NUEVO · ACTIVIDAD DEL CURSO</span><p class="exercise-kicker">TERCER EJERCICIO</p><h1 id="third-exercise-title">BOCINA <em>BLUETOOTH</em></h1><p>Diseña una bocina con identidad propia y una segunda función basada en un perfil de usuario. Cinco retos, electrónica comercial y cero programación.</p><a class="exercise-cta" href="ejercicio-3-bocina.html">CONOCER LOS 5 PERFILES <span aria-hidden="true">↗</span></a><p class="exercise-foot">Diseño centrado en el usuario · Prototipado · Integración electrónica</p></div>
+ <div class="exercise-art" aria-hidden="true"><div class="speaker-shadow"></div><div class="speaker-body"><div class="speaker-ring"></div><div class="speaker-grille"></div><div class="speaker-led"></div></div><div class="sound sound-one"></div><div class="sound sound-two"></div></div>
+</section>
 <header class="hero">
   <div>
     <div class="eyebrow" style="color:#fff;opacity:.76">Presentación del curso</div>

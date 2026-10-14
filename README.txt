@@ -21,3 +21,8 @@ Secciones activas:
 - engranes.html
 
 Las demás secciones permanecen visibles como contenido próximo pero deshabilitadas.
+
+ACTUALIZACIÓN OCTUBRE 2026:
+La portada index.html ahora incluye anuncio destacado al tercer ejercicio.
+Nueva página ejercicio-3-bocina.html: cinco perfiles, ilustraciones SVG, diagramas y BOM con enlaces.
+Los archivos originales de mecanismos permanecen sin modificar.
